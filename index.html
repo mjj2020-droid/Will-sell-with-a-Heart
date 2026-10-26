@@ -3,27 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Will Sell With A Heart</title>
+  <meta name="theme-color" content="#fff4f7">
+  <meta name="description" content="Will Sell With A Heart — browse kitchenware, plasticware, storage, laundry items, and everyday home essentials. Build a product inquiry list.">
+  <title>Will Sell With A Heart | Home & Housewares</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Will Sell With A Heart</h1>
-  <p>Welcome to our product catalog!</p>
-
-  <h2>Our Product Categories</h2>
-  <ul>
-    <li>Kitchenware</li>
-    <li>Laundry Products</li>
-    <li>Buckets and Pails</li>
-    <li>Storage Containers</li>
-    <li>Cleaning Essentials</li>
-    <li>Plastic Bags and Packaging</li>
-  </ul>
-
-    <h2>Our Products</h2>
-
-      <div class="product-gallery">
+  <div class="topnote">A little love in every everyday essential ♡</div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Will Sell With A Heart home">
+        <span class="brand-icon" aria-hidden="true">♥</span>
+        <span class="brand-text"><span>Will Sell</span><span>With A Heart</span></span>
+      </a>
+      <nav class="nav" aria-label="Main menu">
+        <a href="#home">Home</a><a href="#catalog">Shop Catalog</a><a href="#how">How it Works</a>
+      </nav>
+      <button class="cart-open" type="button" data-open-cart>
+        <span aria-hidden="true">♡</span> My Inquiry <span class="cart-count" id="cartCount">0</span>
+      </button>
     </div>
-
+  </header>
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-layout">
+        <div>
+          <p class="eyebrow">Kitchenware • Plasticware • Home</p>
+          <h1 id="heroTitle">Good finds for a <em>happy home.</em></h1>
+          <p class="intro">Discover everyday essentials that make home life a little easier. Browse practical housewares, organizers, pails, laundry items, containers, and more.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#catalog">Browse products →</a>
+            <a class="btn secondary" href="#how">How to inquire</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="circle"></div>
+          <span class="hero-basket">🧺</span>
+          <span class="hero-heart">♥</span>
+          <span class="hero-sticker">Made for everyday living ♡</span>
+        </div>
+      </div>
+    </section>
+    <div class="benefits">
+      <div class="container benefit-line">
+        <span><b aria-hidden="true">♡</b> Household essentials</span>
+        <span><b aria-hidden="true">✦</b> Easy product browsing</span>
+        <span><b aria-hidden="true">✓</b> Inquire before ordering</span>
+      </div>
+    </div>
+    <section class="section" id="catalog" aria-labelledby="catalogTitle">
+      <div class="container">
+        <p class="eyebrow">Explore the collection</p>
+        <h2 id="catalogTitle">Our product catalog</h2>
+        <p class="section-desc">Explore our sample product categories. Pick your favorites and prepare an inquiry to confirm prices, colors, sizes, and availability.</p>
+        <div class="toolbar">
+          <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search products..." aria-label="Search products"></label>
+          <select id="sort" aria-label="Sort products"><option value="featured">Featured order</option><option value="name">Name: A to Z</option><option value="category">By category</option></select>
+        </div>
+        <div class="filters" role="group" aria-label="Product categories">
+          <button class="filter" type="button" data-category="All" aria-pressed="true">All products</button>
+          <button class="filter" type="button" data-category="Kitchenware" aria-pressed="false">Kitchenware</button>
+          <button class="filter" type="button" data-category="Laundry" aria-pressed="false">Laundry</button>
+          <button class="filter" type="button" data-category="Pails & Basins" aria-pressed="false">Pails &amp; Basins</button>
+          <button class="filter" type="button" data-category="Storage" aria-pressed="false">Storage</button>
+          <button class="filter" type="button" data-category="Cleaning" aria-pressed="false">Cleaning</button>
+          <button class="filter" type="button" data-category="Packaging" aria-pressed="false">Packaging</button>
+        </div>
+        <div class="catalog-meta"><span id="results" aria-live="polite">Loading products...</span><span>Preview catalog • Prices upon inquiry</span></div>
+        <div class="product-grid" id="products"></div>
+        <div class="no-results" id="noResults" hidden>
+          <h3>No matching products</h3><p>Try a new keyword or another category.</p>
+          <button class="btn secondary" type="button" id="resetFilters">Clear filters</button>
+        </div>
+      </div>
+    </section>
+    <section class="section how" id="how" aria-labelledby="howTitle">
+      <div class="container">
+        <p class="eyebrow">Just three steps</p><h2 id="howTitle">How to inquire</h2>
+        <p class="section-desc">Browse like a shopping website, without online payments or checkout.</p>
+        <div class="steps">
+          <article class="step"><div class="step-number">01</div><h3>Explore products</h3><p>Search or choose a category to find the housewares you need.</p></article>
+          <article class="step"><div class="step-number">02</div><h3>Build your list</h3><p>Tap Add on products you like and adjust each quantity.</p></article>
+          <article class="step"><div class="step-number">03</div><h3>Send an inquiry</h3><p>Copy your list and message the seller to confirm pricing, stock, and delivery details.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="inquiry">
+      <div class="container">
+        <div class="callout">
+          <div><p class="eyebrow">Let's find what you need</p><h2>Make your everyday easier.</h2><p>Build a shortlist of items you'd love to have at home and ask for the current options.</p></div>
+          <button class="btn" type="button" data-open-cart>View my inquiry →</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div><a href="#home" class="brand"><span class="brand-icon" aria-hidden="true">♥</span><span class="brand-text"><span>Will Sell</span><span>With A Heart</span></span></a><p class="footer-desc">Useful household essentials, selected with heart.</p></div>
+        <nav class="footer-nav" aria-label="Footer"><a href="#home">Home</a><a href="#catalog">Products</a><a href="#how">How to Inquire</a></nav>
+      </div>
+      <div class="copyright">© 2026 Will Sell With A Heart. Product examples for inquiry only; prices and stock availability require confirmation.</div>
+    </div>
+  </footer>
+  <dialog id="inquiryModal" aria-labelledby="inquiryTitle">
+    <div class="dialog-content">
+      <div class="dialog-header">
+        <div><h2 id="inquiryTitle">My inquiry list ♡</h2><p id="cartSummary">0 items</p></div>
+        <button type="button" id="closeCart" class="close-button" aria-label="Close inquiry list">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="empty-cart" id="emptyCart"><strong>Your list is empty.</strong>Browse the catalog to add products you like.</div>
+      <p class="dialog-note">This is not an order or online checkout. Send your inquiry to the seller to confirm prices and other details.</p>
+      <div class="dialog-actions">
+        <button type="button" class="btn primary" id="copyInquiry">Copy inquiry message</button>
+        <button type="button" class="btn clear-button" id="clearCart">Clear list</button>
+      </div>
+    </div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
